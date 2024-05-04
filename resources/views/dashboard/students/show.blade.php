@@ -8,16 +8,16 @@
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Template: {{ $template->name }}</h4>
+                        <h4>Student: {{ $student->name }}</h4>
                     </div>
                     <div class="card-body">
                         <h4>Name</h4>
-                        <p>{{ $template->name }}</p>
+                        <p>{{ $student->name }}</p>
                         <h4>Subject</h4>
-                        <p>{{ $template->subject }}</p>
+                        <p>{{ $student->mobile_number }}</p>
                         <h4>Content</h4>
-                        <p>{{ $template->content }}</p>
-                        <a href="{{ route('mail.index') }}" class="btn btn-primary">Return</a>
+                        <p>{{ $student->roll_number }}</p>
+                        <a href="{{ route('students.index') }}" class="btn btn-primary">Return</a>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,6 @@
 </div>
 
 @endsection
-
 
 @section('javascript')
 

@@ -8,26 +8,26 @@
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Edit Template</h4>
+                        <h4>Edit Student</h4>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('mail.update', $template->id) }}">
+                        <form method="POST" action="{{ route('students.update', $student->id) }}">
                             @csrf
                             @method('PUT')
                             <div class="form-group row">
                                 <label>Name</label>
-                                <input class="form-control" type="text" placeholder="Name" name="name" required autofocus value="{{ $template->name }}" />
+                                <input class="form-control" type="text" placeholder="Name" name="name" required autofocus value="{{ $student->name }}" />
                             </div>
                             <div class="form-group row">
-                                <label>Subject</label>
-                                <input class="form-control" type="text" placeholder="Subject" name="subject" required value="{{ $template->subject }}" />
+                                <label>Mobile Number</label>
+                                <input class="form-control" type="text" placeholder="Mobile Number" name="mobile_number" required value="{{ $student->mobile_number }}" />
                             </div>
                             <div class="form-group row">
-                                <label>Content</label>
-                                <textarea class="form-control" name="content" rows="20" placeholder="Content" required>{{ $template->content }}</textarea>
+                                <label>Roll Number</label>
+                                <input class="form-control" type="text" placeholder="Roll Number" name="roll_number" required value="{{ $student->roll_number }}" />
                             </div>
                             <button class="btn btn-success" type="submit">Edit</button>
-                            <a href="{{ route('mail.index') }}" class="btn btn-primary">Return</a>
+                            <a href="{{ route('students.index') }}" class="btn btn-primary">Return</a>
                         </form>
                     </div>
                 </div>
@@ -37,7 +37,6 @@
 </div>
 
 @endsection
-
 
 @section('javascript')
 

@@ -37,7 +37,6 @@
 
 @endsection
 
-
 @section('javascript')
 
 @endsection
