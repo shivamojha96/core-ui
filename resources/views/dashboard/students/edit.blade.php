@@ -16,18 +16,18 @@
                             @method('PUT')
                             <div class="form-group row">
                                 <label>Name</label>
-                                <input class="form-control" type="text" placeholder="Name" name="name" required autofocus value="{{ $template->name }}"/>
+                                <input class="form-control" type="text" placeholder="Name" name="name" required autofocus value="{{ $template->name }}" />
                             </div>
                             <div class="form-group row">
                                 <label>Subject</label>
-                                <input class="form-control" type="text" placeholder="Subject" name="subject" required value="{{ $template->subject }}"/>
+                                <input class="form-control" type="text" placeholder="Subject" name="subject" required value="{{ $template->subject }}" />
                             </div>
                             <div class="form-group row">
                                 <label>Content</label>
                                 <textarea class="form-control" name="content" rows="20" placeholder="Content" required>{{ $template->content }}</textarea>
                             </div>
                             <button class="btn btn-success" type="submit">Edit</button>
-                            <a href="{{ route('mail.index') }}" class="btn btn-primary">Return</a> 
+                            <a href="{{ route('mail.index') }}" class="btn btn-primary">Return</a>
                         </form>
                     </div>
                 </div>

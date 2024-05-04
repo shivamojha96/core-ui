@@ -15,9 +15,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students = Student::all();
-
-        return view('dashboard.admin.students', compact('students'));
+        $students = Student::paginate(10);
+        return view('dashboard.students.index', compact('students'));
     }
 
     /**
@@ -27,7 +26,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        return view('dashboard.admin.students.create');
+        return view('dashboard.students.create');
     }
 
     /**
@@ -38,7 +37,19 @@ class StudentController extends Controller
      */
     public function store(StoreStudentRequest $request)
     {
-        $student = Student::create($request->all());
+        $validatedData = $request->validate([
+            'name' => 'required|min:1|max:64',
+            'mobile_number' => 'required|min:1|max:128',
+            'roll_number' => 'required|min:1',
+        ]);
+
+        $student = new Student();
+        $student->name = $request->input('name');
+        $student->mobile_number = $request->input('mobile_number');
+        $student->roll_number = $request->input('roll_number');
+        $student->save();
+
+        $request->session()->flash('message', 'Successfully created student.');
         return redirect()->route('students.index');
     }
 
@@ -50,7 +61,7 @@ class StudentController extends Controller
      */
     public function show(Student $student)
     {
-        return view('dashboard.admin.students', compact('student'));
+        return view('dashboard.students.show', compact('student'));
     }
 
     /**
@@ -61,7 +72,7 @@ class StudentController extends Controller
      */
     public function edit(Student $student)
     {
-        return view('dashboard.admin.students', compact('student'));
+        return view('dashboard.students.edit', compact('student'));
     }
 
     /**

@@ -17,9 +17,7 @@
                         <p>{{ $template->subject }}</p>
                         <h4>Content</h4>
                         <p>{{ $template->content }}</p>
-
-
-                        <a href="{{ route('mail.index') }}" class="btn btn-primary">Return</a> 
+                        <a href="{{ route('mail.index') }}" class="btn btn-primary">Return</a>
                     </div>
                 </div>
             </div>
