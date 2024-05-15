@@ -17,10 +17,10 @@
                         <p>{{ $buyer->address }}</p>
                         <h4>Mobile Number</h4>
                         <p>{{ $buyer->mobile_number }}</p>
-                         <h4>email</h4>
-                        <p>{{ $buyer->email }}</p>
-                         <h4>code</h4>
-                        <p>{{ $buyer->code }}</p> 
+                        <h4>email</h4>
+                        <p>{{ $buyer->eamil }}</p>
+                        <h4>code</h4>
+                        <p>{{ $buyer->code }}</p>
                         <h4>status</h4>
                         <p>{{ $buyer->status }}</p>
                         <a href="{{ route('buyers.index') }}" class="btn btn-primary">Return</a>

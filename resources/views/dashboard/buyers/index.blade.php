@@ -32,6 +32,9 @@
                                     <th>code</th>
                                     <th>status</th>
                                     <th></th>
+                                    <th></th>
+                                    <th></th>
+
 
                                 </tr>
                             </thead>

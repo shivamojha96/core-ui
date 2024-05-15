@@ -32,7 +32,9 @@
                                     <th>Email</th>
                                     <th>Shop Code</th>
                                     <th>Status</th>
-
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>

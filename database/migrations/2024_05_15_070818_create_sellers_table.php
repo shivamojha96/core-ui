@@ -19,7 +19,7 @@ class CreateSellersTable extends Migration
             $table->string('address');
             $table->string('contact_person');
             $table->string('contact_number');
-            $table->mail('email');
+            $table->string('email');
             $table->string('shop_code');
             $table->boolean('status')->default(1);
             $table->timestamps();

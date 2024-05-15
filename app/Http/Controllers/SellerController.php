@@ -49,7 +49,7 @@ class SellerController extends Controller
      */
     public function show(Seller $seller)
     {
-        return view('dashboard.seller.show', compact('seller'));
+        return view('dashboard.sellers.show', compact('seller'));
     }
 
     /**
@@ -60,7 +60,7 @@ class SellerController extends Controller
      */
     public function edit(Seller $seller)
     {
-        return view('dashboard.seller.edit', compact('seller'));
+        return view('dashboard.sellers.edit', compact('seller'));
     }
 
     /**
@@ -73,7 +73,7 @@ class SellerController extends Controller
     public function update(UpdateSellerRequest $request, Seller $seller)
     {
         $seller->update($request->all());
-        return redirect()->route('seller.index');
+        return redirect()->route('sellers.index');
     }
 
     /**
@@ -85,6 +85,6 @@ class SellerController extends Controller
     public function destroy(Seller $seller)
     {
         $seller->delete();
-        return redirect()->route('seller.index');
+        return redirect()->route('sellers.index');
     }
 }

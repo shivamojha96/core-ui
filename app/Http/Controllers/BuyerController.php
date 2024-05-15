@@ -26,7 +26,7 @@ class BuyerController extends Controller
      */
     public function create()
     {
-        return view('buyers.create');
+        return view('dashboard.buyers.create',);
     }
 
     /**
@@ -60,7 +60,7 @@ class BuyerController extends Controller
      */
     public function edit(Buyer $buyer)
     {
-        return view('dashboard.buyer.edit', compact('buyer'));
+        return view('dashboard.buyers.edit', compact('buyer'));
     }
 
     /**

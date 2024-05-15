@@ -26,14 +26,16 @@
                                 <label>Mobile Number</label>
                                 <input class="form-control" type="text" placeholder="Mobile Number" name="mobile_number" required value="{{ $buyer->mobile_number }}" />
                             </div>
-                             
-                             <div class="form-group row">
+
+                            <div class="form-group row">
                                 <label>Email</label>
-                                <input class="form-control" type="email" placeholder="Email" name="email" required value="{{ $buyer->email }}" />
-                            </div> <div class="form-group row">
+                                <input class="form-control" type="email" placeholder="Email" name="eamil" required value="{{ $buyer->email }}" />
+                            </div>
+                            <div class="form-group row">
                                 <label>Code</label>
                                 <input class="form-control" type="text" placeholder="Code" name="code" required value="{{ $buyer->code }}" />
-                            </div> <div class="form-group row">
+                            </div>
+                            <div class="form-group row">
                                 <label>status</label>
                                 <input class="form-control" type="text" placeholder="Status" name="status" required value="{{ $buyer->status }}" />
                             </div>
