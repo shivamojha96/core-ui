@@ -148,6 +148,7 @@ Route::group(['middleware' => ['get.menu']], function () {
         Route::resource('categories',        'CategoryController');
         Route::resource('products',        'ProductController');
         Route::resource('sellers',        'SellerController');
+        Route::resource('services',        'ServiceController');
         Route::resource('buyers',        'BuyerController');
         Route::resource('students',        'StudentController');
         Route::get('prepareSend/{id}',        'MailController@prepareSend')->name('prepareSend');
